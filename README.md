@@ -32,45 +32,74 @@ engineering practices.
 - Promote reproducible computational engineering.
 - Improve numerical accuracy and software reliability.
 
+
 ## Available Algorithms
 
-| Algorithm | Category | Source |
+### Module 01 — Numerical Linear Algebra
+
+| Algorithm | Description | Source |
 |---|---|---|
-| Gaussian Elimination | Linear Algebra | [GaussEl.m](GaussEl.m) |
-| Backward Substitution | Linear Algebra | [backsubstitution.m](backsubstitution.m) |
-| Forward Substitution | Linear Algebra | [forwardsubstitution.m](forwardsubstitution.m) |
-| Euler's Number Approximation | Numerical Approximation | [eApproximation.m](eApproximation.m) |
-| Whittaker's Method | Root Finding | [whittaker_method.m](whittaker_method.m) |
+| Forward Substitution | Lower triangular systems | [Source](src/linear_algebra/forward_substitution.m) |
+| Backward Substitution | Upper triangular systems | [Source](src/linear_algebra/backward_substitution.m) |
+| Gaussian Elimination | Linear systems with partial pivoting | [Source](src/linear_algebra/gaussian_elimination.m) |
 
-## Getting Started
+### Legacy Implementations
 
-### Requirements
+Original academic implementations are preserved for
+historical and educational purposes.
 
-- MATLAB
-- Basic knowledge of linear algebra and numerical methods
+These implementations are not actively validated.
 
-### Installation
+| Algorithm | Source |
+|---|---|
+| Gaussian Elimination | [Source](legacy/GaussEl.m) |
+| Forward Substitution | [Source](legacy/forwardsubstitution.m) |
+| Backward Substitution | [Source](legacy/backsubstitution.m) |
+| Euler's Number Approximation | [Source](legacy/eApproximation.m) |
+| Whittaker's Method | [Source](legacy/whittaker_method.m) |
 
-Clone the repository:
+## Quick Start
 
-```bash
-git clone https://github.com/TheWinterCoderDev/MATLAB-Survival-Toolbox.git
+Open the repository root directory in MATLAB.
+
+Add the source code to the MATLAB search path:
+
+```matlab
+addpath(genpath('src'));
 ```
 
-Open the repository directory in MATLAB and explore
-the available functions.
+Run the linear system example:
 
-### Development Status
+```matlab
+run('examples/example_linear_system.m');
+```
 
-This repository contains legacy academic implementations
-that are currently undergoing technical review.
+## Running Tests
 
-Some algorithms may require corrections, additional
-dependencies or input validation.
+Execute the automated test suite:
 
-The toolbox is intended for educational purposes and
-should not be used for safety-critical engineering
-calculations without independent verification.
+```matlab
+addpath(genpath('src'));
+results = runtests('tests');
+disp(results);
+assert(~isempty(results) && all([results.Passed]));
+```
+
+## Technical Documentation
+
+- [Numerical Linear Algebra](docs/linear_algebra.md)
+- [Changelog](CHANGELOG.md)
+- [Security Policy](SECURITY.md)
+- [License](LICENSE)
+
+## Limitations
+
+The toolbox is intended for educational and research
+purposes. It is not certified for production or
+safety-critical engineering applications.
+
+The numerical algorithms must be independently
+verified before being used in real engineering projects.
 
 ## Development Roadmap
 
