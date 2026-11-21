@@ -1,44 +1,134 @@
-# MATLAB Survival Repository 🛠️⚡
-Welcome, fellow student! If you’ve landed here, chances are MATLAB is giving you a hard time. Don’t worry—this repository is here to help you survive and thrive!
 
-This is my personal collection of MATLAB codes developed during my university course Numerical Methods for Engineering. It serves a double purpose:
+# 🧮 MATLAB Survival Toolbox
 
-✅ Helping students understand the basics of MATLAB programming.
+### Numerical Methods & Computational Engineering
 
-🎯 Preparing for the MathWorks Certified MATLAB Associate Exam.
+![MATLAB](https://img.shields.io/badge/Language-MATLAB-E16737?style=flat-square)
+![License](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Under_Development-orange?style=flat-square)
+![Engineering](https://img.shields.io/badge/Domain-Computational_Engineering-00599C?style=flat-square)
 
-Whether you are revisiting fundamentals, solving exercises, or just exploring MATLAB for the first time, this workspace is built to guide you through it.
+## Overview
 
-📂 What you’ll find here
+MATLAB Survival Toolbox is an educational open-source
+collection of numerical algorithms originally developed
+during my Civil Engineering studies at the Universitat
+Politècnica de Catalunya (UPC).
 
-- Example codes for core numerical methods.
+The project aims to provide accessible, understandable
+and reproducible implementations of fundamental
+numerical methods used in computational engineering.
 
-- Clear explanations with comments inside the scripts.
+Originally developed as an academic resource, the project
+is now being progressively modernized with improved
+numerical robustness, documentation and software
+engineering practices.
 
-- Practice-oriented exercises to sharpen your skills.
+## Objectives
 
-- Resources and notes to prepare for the official MathWorks certification.
+- Provide educational implementations of numerical methods.
+- Support engineering students and computational researchers.
+- Connect mathematical theory with practical programming.
+- Promote reproducible computational engineering.
+- Improve numerical accuracy and software reliability.
 
-🚀 How to use
+## Available Algorithms
 
-- Clone or download the repository.
+| Algorithm | Category | Source |
+|---|---|---|
+| Gaussian Elimination | Linear Algebra | [GaussEl.m](GaussEl.m) |
+| Backward Substitution | Linear Algebra | [backsubstitution.m](backsubstitution.m) |
+| Forward Substitution | Linear Algebra | [forwardsubstitution.m](forwardsubstitution.m) |
+| Euler's Number Approximation | Numerical Approximation | [eApproximation.m](eApproximation.m) |
+| Whittaker's Method | Root Finding | [whittaker_method.m](whittaker_method.m) |
 
-- Open the .m files in MATLAB.
+## Getting Started
 
-- Run, modify, and experiment.
+### Requirements
 
-- Learn by doing—the fastest way to master MATLAB!
+- MATLAB
+- Basic knowledge of linear algebra and numerical methods
 
-🎓 Who is this for?
+### Installation
 
-- Engineering students (especially 2nd year of Civil Engineering Bachelor).
+Clone the repository:
 
-- Anyone preparing for the MATLAB Associate Certification.
+```bash
+git clone https://github.com/TheWinterCoderDev/MATLAB-Survival-Toolbox.git
+```
 
-- Curious minds who want to improve their coding and numerical methods skills.
+Open the repository directory in MATLAB and explore
+the available functions.
 
-🤝 Contribute
+### Development Status
 
-If you find mistakes, want to add examples, or improve documentation, feel free to open a pull request. Sharing knowledge makes us all stronger!
+This repository contains legacy academic implementations
+that are currently undergoing technical review.
 
-🔥 Survival is just the first step—mastery comes next. Keep coding!
+Some algorithms may require corrections, additional
+dependencies or input validation.
+
+The toolbox is intended for educational purposes and
+should not be used for safety-critical engineering
+calculations without independent verification.
+
+## Development Roadmap
+
+### Phase I — Repository Modernization
+
+- [x] Professional repository documentation
+- [ ] Modular directory structure
+- [ ] Standardized function documentation
+- [ ] Input validation
+- [ ] Review of legacy implementations
+
+### Phase II — Numerical Validation
+
+- [ ] Automated unit tests
+- [ ] Comparison with built-in MATLAB functions
+- [ ] Numerical error analysis
+- [ ] Performance benchmarks
+- [ ] Reproducible examples
+
+### Phase III — Toolbox Expansion
+
+- [ ] Nonlinear equation solvers
+- [ ] Numerical interpolation
+- [ ] Numerical differentiation
+- [ ] Numerical integration
+- [ ] Ordinary differential equations
+- [ ] Numerical optimization
+
+### Phase IV — Engineering Applications
+
+- [ ] Structural engineering examples
+- [ ] Transportation engineering applications
+- [ ] Civil infrastructure modelling
+- [ ] Applied computational case studies
+
+## Contributing
+
+Contributions, corrections, suggestions and educational
+examples are welcome through GitHub Issues and Pull Requests.
+
+## License
+
+This project is distributed under the GNU General Public
+License v3.0.
+
+See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Raúl Galdeano Pazos — The Winter Coder**
+
+Civil Engineering | Computational Engineering |
+Data & Automation | Transportation Systems
+
+[LinkedIn](https://www.linkedin.com/in/raulgaldeanopazos/)
+
+---
+
+*Survival is just the first step — mastery comes next.*
+
+**Ad Victoriam!**
