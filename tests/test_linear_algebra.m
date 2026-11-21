@@ -1,15 +1,37 @@
 
+
 function tests = test_linear_algebra
+% TEST_LINEAR_ALGEBRA Unit tests for numerical solvers.
+%
+% Project: MATLAB Survival Toolbox
 
     tests = functiontests(localfunctions);
 
 end
 
+function setupOnce(testCase)
+
+    root = fileparts(fileparts(mfilename('fullpath')));
+
+    testCase.TestData.originalPath = path;
+
+    addpath(fullfile(root, 'src', 'linear_algebra'));
+
+end
+
+function teardownOnce(testCase)
+
+    path(testCase.TestData.originalPath);
+
+end
+
+%% TEST 01 — Gaussian elimination
+
 function testGaussianElimination(testCase)
 
-    A = [2, 1, -1;
-        -3, -1, 2;
-        -2, 1, 2];
+    A = [ 2,  1, -1;
+         -3, -1,  2;
+         -2,  1,  2];
 
     b = [8; -11; -3];
 
@@ -19,7 +41,12 @@ function testGaussianElimination(testCase)
     verifyEqual(testCase, actual, expected, ...
         'AbsTol', 1e-10);
 
+    verifyLessThan(testCase, ...
+        norm(A*actual - b), 1e-10);
+
 end
+
+%% TEST 02 — Forward substitution
 
 function testForwardSubstitution(testCase)
 
@@ -30,11 +57,14 @@ function testForwardSubstitution(testCase)
     b = [2; 5; 15];
 
     actual = forward_substitution(L, b);
+    expected = L\b;
 
-    verifyEqual(testCase, actual, L\b, ...
+    verifyEqual(testCase, actual, expected, ...
         'AbsTol', 1e-10);
 
 end
+
+%% TEST 03 — Backward substitution
 
 function testBackwardSubstitution(testCase)
 
@@ -45,11 +75,14 @@ function testBackwardSubstitution(testCase)
     b = [13; 11; 6];
 
     actual = backward_substitution(U, b);
+    expected = U\b;
 
-    verifyEqual(testCase, actual, U\b, ...
+    verifyEqual(testCase, actual, expected, ...
         'AbsTol', 1e-10);
 
 end
+
+%% TEST 04 — Partial pivoting
 
 function testPartialPivoting(testCase)
 
@@ -65,6 +98,8 @@ function testPartialPivoting(testCase)
 
 end
 
+%% TEST 05 — Singular matrix detection
+
 function testSingularMatrix(testCase)
 
     A = [1, 2;
@@ -78,6 +113,8 @@ function testSingularMatrix(testCase)
 
 end
 
+%% TEST 06 — Invalid triangular matrix
+
 function testInvalidTriangularMatrix(testCase)
 
     L = [1, 2;
@@ -90,3 +127,4 @@ function testInvalidTriangularMatrix(testCase)
         'Toolbox:InvalidMatrix');
 
 end
+
