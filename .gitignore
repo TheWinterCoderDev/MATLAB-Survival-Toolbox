@@ -1,0 +1,33 @@
+
+# MATLAB temporary files
+*.asv
+*.autosave
+*.m~
+*.slx.r*
+*.mdl.r*
+
+# MATLAB generated files
+slprj/
+*.slxc
+*.mex*
+codegen/
+
+# Crash reports
+matlab_crash_dump.*
+octave-workspace
+
+# Test and coverage outputs
+test-results/
+coverage/
+
+# IDE configuration
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
