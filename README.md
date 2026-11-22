@@ -7,6 +7,8 @@
 ![License](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Under_Development-orange?style=flat-square)
 ![Engineering](https://img.shields.io/badge/Domain-Computational_Engineering-00599C?style=flat-square)
+[![MATLAB CI](https://github.com/TheWinterCoderDev/MATLAB-Survival-Toolbox/actions/workflows/matlab-ci.yml/badge.svg?branch=main)](https://github.com/TheWinterCoderDev/MATLAB-Survival-Toolbox/actions/workflows/matlab-ci.yml)
+
 
 ## Overview
 
