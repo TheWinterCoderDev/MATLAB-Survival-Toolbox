@@ -1,0 +1,45 @@
+
+name: MATLAB CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/**'
+      - 'refactor/**'
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-validation:
+
+    name: Numerical Linear Algebra Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2025b
+
+      - name: Run unit tests
+        uses: matlab-actions/run-tests@v3
+        with:
+          source-folder: src
+          select-by-folder: tests
+          strict: true
+          output-detail: detailed
