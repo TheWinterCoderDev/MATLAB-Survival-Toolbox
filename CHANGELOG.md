@@ -6,7 +6,7 @@ will be documented in this file.
 
 The project aims to follow Semantic Versioning.
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-11-22
 
 ### Added
 
